@@ -9,4 +9,8 @@ public class OutputFeature {
     public void requestHowManyDo(){
         System.out.println("시도할 회수는 몇회인가요?");
     }
+
+    public static void printStatement(String message){
+        System.out.println(message);
+    }
 }
