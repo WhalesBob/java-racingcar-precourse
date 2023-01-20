@@ -44,7 +44,7 @@ public class InputValidator {
     public void validateNotHaveOtherSeparator(String input){
         String[] carNames = input.split(",");
         for(String carName : carNames){
-            if(!Pattern.matches("/^[a-zA-Z0-9 ]*$/",carName)){
+            if(!Pattern.matches("^[a-zA-Z0-9]*$",carName)){
                 String errorMessage = "[ERROR] 자동차의 이름 입력에는 오직 숫자와 문자, 그리고 콤마(,) 만 입력할 수 있습니다.";
                 errorProcess(errorMessage);
             }
