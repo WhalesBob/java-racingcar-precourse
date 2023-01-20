@@ -49,12 +49,19 @@ class InputFeatureTest {
             String input = "pobi,woni,jun";
             getCarNameTest(input);
         }
+
+        @DisplayName("정상 동작 - 새로운 방법으로 차 이름을 잘 받는지 확인하기2")
+        @Test
+        void getCarName_2(){
+            String input = "pobi,woni";
+            getCarNameTest(input);
+        }
     }
 
     @Nested
-    class GetTryingCountTest{
+    class GetTryingCountTest {
 
-        void getTryingCountTest(String input){
+        void getTryingCountTest(String input) {
             beforeSetting(input);
             int output = Integer.parseInt(input);
             assertThat(inputFeature.getTryingCount()).isEqualTo(output);
@@ -62,13 +69,9 @@ class InputFeatureTest {
 
         @DisplayName("정상 동작 - 새로운 방법으로 숫자를 잘 받는지 확인하기")
         @Test
-        void getTryingCount_1(){
+        void getTryingCount_1() {
             String input = "1";
             getTryingCountTest(input);
         }
     }
-
-
-
-
 }

@@ -9,21 +9,21 @@ public class InputValidator {
 
     public boolean validateCarNames(String input){
         List<Consumer<String>> validateList = new ArrayList<>();
-        validateList.add((in)->validateCarNameLength(input));
-        validateList.add((in)->validateNotHaveOtherSeparator(input));
+        validateList.add(this::validateCarNameLength);
+        validateList.add(this::validateNotHaveOtherSeparator);
         return validateResult(validateList, input);
     }
 
     public boolean validateTryingCount(String input){
         List<Consumer<String>> validateList = new ArrayList<>();
-        validateList.add((in) -> validateInputAsInteger(input));
+        validateList.add(this::validateInputAsInteger);
         return validateResult(validateList, input);
     }
 
     public boolean validateResult(List<Consumer<String>> validateList, String input){
         try{
-            for(int validateIndex = 0; validateIndex < validateList.size(); validateIndex++){
-                validateList.get(validateIndex).accept(input);
+            for (Consumer<String> stringConsumer : validateList) {
+                stringConsumer.accept(input);
             }
             return true;
         }catch(IllegalArgumentException ex){
