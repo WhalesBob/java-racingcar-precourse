@@ -185,3 +185,21 @@ public class Car {
 ## 📝 License
 
 This project is [MIT](https://github.com/woowacourse/java-racingcar-precourse/blob/master/LICENSE) licensed.
+
+---
+
+## 기능 구현 리스트
+
+### 1. 입력
+  + 입력받는 방법
+    - camp.nextstep.edu.missionUtils.Console 의 readLine() 을 통해서 입력받는다.
+  
+  + 경주 할 자동차 이름 입력받기
+    - 이름은 쉼표 기준으로 구분한다. 
+    - 이름은 5자 이하만 가능하다.
+  
+  + 시도할 회수 입력받기
+    - 시도할 회수는 자연수로 입력받는다.
+  
+  + 잘못 입력할 경우
+    - IllegalArgumentException 을 발생시키고, "[ERROR]" 로 시작하는 에러 메세지를 출력 후 그 부분부터 입력을 다시 받는다. 
