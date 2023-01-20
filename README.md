@@ -212,3 +212,11 @@ This project is [MIT](https://github.com/woowacourse/java-racingcar-precourse/bl
     - 우승자가 여러 명일 경우, 쉼표(,) 를 이용해 구분한다.
     - 최종 우승자 : pobi
     - 최종 우승자 : pobi,jun
+### 3. 자동차 구현하기(Car 객체)
+
++ 각 자동차에 이름이 부여된다.
+
++ 주어진 횟수 동안 자동차가 전진하거나, 멈출 수 있게 하기
+    - 전진하는 조건은, 0에서 9 사이 무작위 값을 구한 후, 무작위 값이 4 이상일 때 전진한다.
+    - 이 때, Random 값 추출은 camp.nextstep.edu.missionUtils.Random 의 pickNumberInRange() 를 활용한다.
+  
