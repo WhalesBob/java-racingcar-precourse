@@ -203,3 +203,12 @@ This project is [MIT](https://github.com/woowacourse/java-racingcar-precourse/bl
   
   + 잘못 입력할 경우
     - IllegalArgumentException 을 발생시키고, "[ERROR]" 로 시작하는 에러 메세지를 출력 후 그 부분부터 입력을 다시 받는다. 
+
+### 2. 출력
++ 각 차수별 실행 결과
+    - 전진하는 자동차를 출력할 때, 자동차 이름을 같이 출력한다.
+
++ 단독 우승자 안내 문구
+    - 우승자가 여러 명일 경우, 쉼표(,) 를 이용해 구분한다.
+    - 최종 우승자 : pobi
+    - 최종 우승자 : pobi,jun
